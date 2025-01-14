@@ -1,0 +1,198 @@
+clear
+help countWords
+ [c] = <strong>countWords</strong>(s)
+ Returns the total number of words in the character array "s" 
+  "s" contains only lowercase letters, each word is 
+ separated by a single space, and there are no spaces 
+  at the beginning or end of "s"
+
+help getWordN
+ [word] = getWord(s,n)
+ this function returns the "n"th word in "s"
+ "word" is a character array
+ If "s" is empty, return an empty character array
+ function takes in a character array "s", and an integer "n"
+  "s" is an all lowercase character array, has no spaces at 
+  the beginning or end, and each word is separated by a single space 
+  "s" may also be empty.
+
+help wordBeforeWord
+ [result] = <strong>wordBeforeWord</strong>(word1, word2)
+ Return true if "word1" alaphabetically comes before "word2"
+ if not the case return false
+ Ex: true = <strong>wordBeforeWord</strong>('goodbye','hello')
+
+
+help minWord
+ [word, index] = <strong>minWord</strong>(s)
+ function returns "word from "s" where "word" is
+ alphabetically before all other words in "s". 
+  function also returns the number of this "word" in "s"
+  which is represented by variable "index"
+  "w" and "s" are both character arrays, "index" is an integer
+  "s" contains only lowercase letters, each word is
+  separated by a single space, and it can't have any spaces 
+  at the beginning or end of it
+  If "s" is an empty character array, return an empty character 
+  array and the number 0.
+
+help removeWordN
+ [result] = removeWord(s,n)
+ function removes the "n"th word from the character array "s" 
+  and returns the remaining sentence "result"
+ If "s" is empty, function returns an empty character array
+  If there is no "n"th word in "s", return "s"
+ function takes in a character array "s", and an integer "n" 
+  and returns a character array "result"
+  "s" contains only lowercase letters, each word is
+  separated by a single space, and it can't have any spaces 
+  at the beginning or end of it
+
+help sentenceSelectionSort
+ [sortedSentence] = <strong>sentenceSelectionSort</strong>(s)
+ this function returns the character array "sortedSentence"
+  with the words in "s" alphabetically sorted using
+  a selection sort algorithm
+  function takes in an unsorted sentence of words character array "s"
+  "s" has no beginning or trailing spaces and each word within 
+  it is single space separated
+  "s" also may be empty. if so, returns an empty character array
+
+countWords('one two three four')
+
+ans =
+
+     4
+
+countWords('')
+
+ans =
+
+     0
+
+getWordN('one two three four',2)
+
+ans =
+
+    'two'
+
+getWordN('one two three four',6)
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup('char')" style="font-weight:bold">char</a> array
+
+getWordN('one two three four',0)
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup('char')" style="font-weight:bold">char</a> array
+
+wordBeforeWord('down','up')
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   1
+
+wordBeforeWord('programming','program')
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   0
+
+wordBeforeWord('rain','rainfall')
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   1
+
+wordBeforeWord('same','same')
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   0
+
+wordBeforeWord('','empty')
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   1
+
+wordBeforeWord('z','x')
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   0
+
+[w,n] = minWord('one two three four')
+
+w =
+
+    'four'
+
+
+n =
+
+     4
+
+[w,n] = minWord('m a t l a b')
+
+w =
+
+    'a'
+
+
+n =
+
+     2
+
+removeWordN('one two three four', 2)
+
+ans =
+
+    'one three four'
+
+removeWordN('one two three four', 6)
+
+ans =
+
+    'one two three four'
+
+removeWordN('m a t l a b', 2)
+
+ans =
+
+    'm t l a b'
+
+sentenceSelectionSort('one two three four')
+
+ans =
+
+    'four one three two'
+
+sentenceSelectionSort('m a t l a b')
+
+ans =
+
+    'a a b l m t'
+
+sentenceSelectionSort('only')
+
+ans =
+
+    'only'
+
+%Byron Wong, bw540, 232001450
+diary off
